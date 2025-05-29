@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script-main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Library</h1>
+        </div>
+        <div class="sidebar">
+            
+            <form>
+                
+                <label for="title">Book Title</label>
+                <input type="text" name="title" id="title">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author">
+                <label for="pageCount">Page Count</label>
+                <input type="number" name="pageCount" id="pageCount">
+
+                <button type="submit" class="addBook">Add Book</button>
+                
+
+            </form>
+        </div>
+        <div class="body">
+            <table class="display">
+                <thead class="table-head">
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Page Count</th>
+                        <th>Read/Unread</th>
+                        <th>unique id</th>
+                        <th></th>
+                        <th></th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="table-body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
