@@ -51,7 +51,10 @@ myForm.addEventListener("submit", (event) => {
     myLibrary.push(newBook);
     // refresh the library table
     displayLibrary();
+    myForm.style = "display: none";
 })
+
+//add event listener to addform button to make form visible
 
 //function to create table full of books
 function displayLibrary() {
@@ -151,6 +154,11 @@ function displayLibrary() {
 
 
 //'New Book' button that brings up a form for user to input details of new book
+const displayForm = document.querySelector("button.displayForm");
+displayForm.addEventListener("click", function(event) {
+    formToDisplay = document.querySelector("form");
+    formToDisplay.style = "display: grid";
+})
 
 //Initialize the page with the existing library
 displayLibrary();
