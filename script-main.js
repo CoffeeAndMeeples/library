@@ -1,26 +1,27 @@
 const myLibrary = [];
 
-//constructor to create the Book object
+//Book class
 //title, author, pages, read
-function Book(title, author, pageCount) {
-    if (!new.target) {
-        throw Error("You must use the 'new' operator to call the constructor")
-    }
-    this.title = title;
-    this.author = author;
-    this.pages = pageCount;
-    this.read = "Unread";
-    this.id = self.crypto.randomUUID();
-}
-//create prototype function to toggle this.read to "Have Read"
-Book.prototype.haveRead = function() {
-    if (this.read === "Have Read") {
+
+class Book {
+    constructor(title, author, pageCount) {
+        this.title = title;
+        this.author = author;
+        this.pageCount = pageCount;
         this.read = "Unread";
+        this.id = self.crypto.randomUUID();
     }
-    else {
-        this.read = "Have Read";
+
+    haveRead() {
+        if (this.read === "Have Read") {
+                    this.read = "Unread";
+                }
+                else {
+                    this.read = "Have Read";
+                }
     }
 }
+
 // create 2 books and add them to myLibrary to help with creating the display
 const fakeBook1 = new Book("Fake Book", "Jazz Person", 112);
 const fakeBook2 = new Book("Real Book", "Bebop Dude", 309);
