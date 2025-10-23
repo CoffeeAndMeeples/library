@@ -34,8 +34,21 @@ myLibrary.push(fakeBook2);
 
 const myForm = document.querySelector("form");
 myForm.addEventListener("submit", (event) => {
-    
     event.preventDefault();
+    
+    const title = document.getElementById("title");
+    const author = document.getElementById("author");
+    const pagecount = document.getElementById("pageCount");
+    
+    if (title.validity.valueMissing || author.validity.valueMissing || pagecount.validity.valueMissing) {
+        
+        alert("All fields must have a value.");
+        return
+
+    }
+    else {
+        title.setCustomValidity('');
+    }
     
   
     const formData = new FormData(myForm);
@@ -54,8 +67,6 @@ myForm.addEventListener("submit", (event) => {
     displayLibrary();
     myForm.style = "display: none";
 })
-
-//add event listener to addform button to make form visible
 
 //function to create table full of books
 function displayLibrary() {

@@ -14,14 +14,14 @@
         </div>
         <div class="sidebar">
             <button class="displayForm">Add a Book</button>
-            <form style="display: none">
+            <form id="newbookform" style="display: none" novalidate>
                 
                 <label for="title">Book Title</label>
-                <input type="text" name="title" id="title">
+                <input type="text" name="title" id="title" required>
                 <label for="author">Author</label>
-                <input type="text" name="author" id="author">
+                <input type="text" name="author" id="author" required>
                 <label for="pageCount">Page Count</label>
-                <input type="number" name="pageCount" id="pageCount">
+                <input type="number" name="pageCount" id="pageCount" required>
 
                 <button type="submit" class="addBook">Add Book</button>
                 
